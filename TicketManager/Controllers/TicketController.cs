@@ -243,7 +243,7 @@ namespace TicketManager.Controllers
             return Ok(ticketDto);
         }
 
-        [HttpGet]
+        [HttpGet ("ticket")]
         public async Task<IActionResult> GetAsync(Guid clientId)
         {
             var client = await _context.Clients.FindAsync(clientId);
@@ -261,7 +261,7 @@ namespace TicketManager.Controllers
 
             return Ok(tickets);
         }
-        [HttpGet]
+        [HttpGet("employee/ticket")]
         public async Task<IActionResult> EmployeeTicket(Guid EmployeeId)
         {
             var Employee = await _context.Employees.FindAsync(EmployeeId);
