@@ -49,7 +49,7 @@ namespace TicketManager.Controllers
                 var token = GenerateJwtToken("client");
                 return Ok(new { token });
             }
-
+           
             return Unauthorized("Invalid credentials");
         }
 
